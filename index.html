@@ -23,7 +23,7 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand"><a href="http://startbootstrap.com">Start Bootstrap</a></li>
+        <li class="sidebar-brand"><a href="http://archistar.github.io/archistar.at">Archistar</a></li>
         <li><a href="#top">Home</a></li>
         <li><a href="#intro">Intro</a></li>
         <li><a href="#features">Features</a></li>
@@ -55,16 +55,18 @@
             <p class="lead">
                 Archistar is a research project funded by the Austrian
                 Federal Ministry for Transport, Innovation and Technology. It is dedicated to
-                the development of a secure distributed cloud storage architecture for trustworthy
+                the development of a secure distributed storage architecture for trustworthy
                 cloud usage.
 
-                The Archistar framework combines methods from the domain of <i>Byzantine fault tolerance</i>
-                with cryptographic techniques from <i>secure multi-party computation</i> and additional 
+                The Archistar framework combines methods from the domain of <i>Byzantine fault tolerance</i>,
+                cryptographic techniques from <i>secure multi-party computation</i> and additional 
                 tools from <i>cloud cryptography</i> into a novel system.
 
-                <img class="img-portfolio img-responsive" width="70%" src="img/as-techniques.png">
+                <p>
+                  <img class="img-portfolio img-responsive" width="70%" src="img/as-techniques.png">
+                </p>
 
-                A software prototype is developed within Archistar, which is capable of connecting
+                An open-source <a href="https://github.com/archistar/archistar-core">software prototype</a> is provided. It is capable of connecting
                 multiple cloud resources. This type of configuration is often called multi-cloud 
                 paradigm or cloud-of-clouds.
               </p>
@@ -89,8 +91,8 @@
               <i class="service-icon fa fa-key"></i>
               <h4>Privacy and integrity</h4>
               <p>Privacy and integrity are guaranteed by the use of robust secret sharing
-              when distributing information. Thus no bounded minority of nodes in the systems
-              have enough information to recover the secret. For efficiency Archistar also supports
+              for distributed information. No bounded minority of storage systems
+              have enough information to recover the user's secret. For efficiency Archistar also supports
               computational secure secret sharing schemes.</p>
             </div>
           </div>
@@ -98,10 +100,10 @@
             <div class="service-item">
               <i class="service-icon fa fa-wrench"></i>
               <h4>Robustness</h4>
-              <p>Byzantine robustness is accomplished by the use of a layer of active components
-              in the cloud which run a PBFT protocol. Hence, beside all nodes being honest but curious,
-              the system can also survive arbitrary malicious active attacks from insiders, as long as 
-              they less than one third of system nodes.</p>
+              <p>Byzantine robustness is accomplished by the use of a layer of active cloud components
+              running a modified PBFT protocol.
+              The system can survive arbitrary malicious active attacks from insiders, as long as 
+              they compromise less than a third of the system nodes.</p>
             </div>
           </div>
         </div>
@@ -110,8 +112,8 @@
             <div class="service-item">
               <i class="service-icon fa fa-shield"></i>
               <h4>Availability</h4>
-              <p>The idea of a distributed secure and robust system also gives increased availability.
-              The system is immune against arbitrary failures in subsets of nodes and therefore also 
+              <p>A distributed secure and robust system also increases availability.
+              The system is immune against arbitrary failures in subsets of nodes and therefore can 
               survive outages of single providers.</p>
             </div>
           </div>
@@ -119,9 +121,9 @@
             <div class="service-item">
               <i class="service-icon fa fa-money"></i>
               <h4>No vendor lock-in</h4>
-              <p>A vendor and interface agnostic storage layer guarantees the highest flexibility
-              for remote data storage and gives you control back over your assets. Changing 
-              providers should be easy and also result in money savings.</p>
+              <p>A vendor and interface agnostic storage layer guarantees high flexibility
+              for remote data storage. Take back your data! Changing 
+              providers should be easy and results in monetary savings.</p>
             </div>
           </div>
         </div>
@@ -241,7 +243,7 @@
         </div>
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-              <h4>If you are interested in collaborating,<br/> please contact us at GitHub!</h4>
+              <h4>If you are interested in collaborating,<br/> please contact us at <a href="https://github.com/archistar">GitHub</a>!</h4>
           </div>
         </div>
       </div>
