@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Archistar project site.">
+    <meta name="author" content="Thomas Loruenser">
+
+    <title>Stylish Portfolio Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-reorder"></i></a>
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li class="sidebar-brand"><a href="http://startbootstrap.com">Start Bootstrap</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /Side Menu -->
+  
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+      <div class="top-text">
+        <h1>&nbsp;</h1>
+        <h1>Archistar</h1>
+        <h3>A framework for building secure distributed storage systems.</h3>
+        <a href="#about" class="btn btn-default btn-lg">Find Out More</a>
+      </div>
+    </div>
+    <!-- /Full Page Image Header Area -->
+  
+    <!-- Intro -->
+    <div id="about" class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2>
+                What is Archistar?
+            </h2>
+            <p class="lead">
+                Archistar is a research project funded by the Austrian
+                Federal Ministry for Transport, Innovation and Technology. It is dedicated to
+                the development of a secure distributed cloud storage architecture for trustworthy
+                cloud usage.
+
+                The Archistar framework combines methods from the domain of <i>Byzantine fault tolerance</i>
+                with cryptographic techniques from <i>secure multi-party computation</i> and additional 
+                tools from <i>cloud cryptography</i> into a novel system.
+
+                <img class="img-portfolio img-responsive" width="70%" src="img/as-techniques.png">
+
+                A software prototype is developed within Archistar, which is capable of connecting
+                multiple cloud resources. This type of configuration is often called multi-cloud 
+                paradigm or cloud-of-clouds.
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Intro -->
+  
+    <!-- Features -->
+    <div id="services" class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+              <h2>Security Features</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-key"></i>
+              <h4>Privacy and integrity</h4>
+              <p>Privacy and integrity are guaranteed by the use of robust secret sharing
+              when distributing information. Thus no bounded minority of nodes in the systems
+              have enough information to recover the secret. For efficiency Archistar also supports
+              computational secure secret sharing schemes.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-wrench"></i>
+              <h4>Robustness</h4>
+              <p>Byzantine robustness is accomplished by the use of a layer of active components
+              in the cloud which run a PBFT protocol. Hence, beside all nodes being honest but curious,
+              the system can also survive arbitrary malicious active attacks from insiders, as long as 
+              they less than one third of system nodes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-shield"></i>
+              <h4>Availability</h4>
+              <p>The idea of a distributed secure and robust system also gives increased availability.
+              The system is immune against arbitrary failures in subsets of nodes and therefore also 
+              survive outages of single providers.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="service-item">
+              <i class="service-icon fa fa-money"></i>
+              <h4>No vendor lock-in</h4>
+              <p>A vendor and interface agnostic storage layer guarantees the highest flexibility
+              for remote data storage and gives you control back over your assets. Changing 
+              providers should be easy and also result in money savings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Features -->
+
+    <!-- Callout -->
+    <div class="callout">
+      <div class="vert-text">
+        <h1>Data privacy is an issue!</h1>
+      </div>
+    </div>
+    <!-- /Callout -->
+
+    <!-- Archistecture -->
+    <div id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Architecture</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3><i>Use case: Digital safe</i></h3>
+            <img class="img-portfolio img-responsive"  src="img/cloud-of-clouds3.png">
+            <hr>
+            
+            <h3><i>System layers</i></h3>
+            <img class="img-portfolio img-responsive"  src="img/safe-architecture.png">
+            <hr>
+
+            <h3><i>Software architecture</i></h3>
+            <img class="img-portfolio img-responsive"  src="img/components_rough.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Architecture -->
+
+    <!-- Go to source -->
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3>Current results of Archistar are Open Source and available on Github.</h3>
+            <a href="https://github.com/Archistar" class="btn btn-lg btn-default">Archistar Repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Go to source -->
+
+    <!-- Partners -->
+    <div id="about" class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Project Partners</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2 text-center">
+            <div class="portfolio-item">
+              <a href="http://www.ait.ac.at"><img class="img-portfolio img-responsive"  src="img/ait_logo.png"></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="portfolio-item">
+              <h4>Project lead and research partner</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2 text-center">
+            <div class="portfolio-item">
+              <a href="http://www.iaik.tugraz.at"><img class="img-portfolio img-responsive"  src="img/iaik_logo.png"></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="portfolio-item">
+              <h4>Academic research partner</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2 text-center">
+            <div class="portfolio-item">
+              <a href="http://www.datentechnik-innovation.com"><img class="img-portfolio img-responsive"  src="img/dti_logo.png"></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="portfolio-item">
+              <h4>Industrial partner</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2 text-center">
+            <div class="portfolio-item">
+              <a href="http://www.ffg.at"><img class="img-portfolio img-responsive"  src="img/bmvit_logo.png"></a>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="portfolio-item">
+              <h4>Funding organisation</h4>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <img class="img-portfolio img-responsive"  src="img/archistar_logo.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+              <h4>If you are interested in collaborating,<br/> please contact us at GitHub!</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Partners -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <div class="top-scroll">
+              <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; AIT - Austrian Institute of Technology GmbH 2013</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Custom JavaScript for the Side Menu and Smooth Scrolling - Put in a custom JavaScript file to clean this up -->
+    <script>
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+    <script>
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+
+</html>
