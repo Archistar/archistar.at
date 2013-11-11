@@ -23,11 +23,16 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <li class="sidebar-brand"><a href="http://archistar.github.io/archistar.at">Archistar</a></li>
+        <li class="sidebar-brand">
+          <a href="http://archistar.github.io/archistar.at">Archistar</a>
+        </li>
         <li><a href="#top">Home</a></li>
         <li><a href="#intro">Intro</a></li>
-        <li><a href="#features">Features</a></li>
+        <li><a href="#goals">Goals</a></li>
+        <li><a href="#usecases">Use Cases</a></li>
+        <li><a href="#methods">Methods</a></li>
         <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#results">Results</a></li>
         <li><a href="#partners">Partners</a></li>
       </ul>
     </div>
@@ -36,7 +41,6 @@
     <!-- Full Page Image Header Area -->
     <div id="top" class="header">
       <div class="top-text">
-        <h1>&nbsp;</h1>
         <h1>Archistar</h1>
         <h3>A framework for building secure distributed storage systems.</h3>
         <a href="#intro" class="btn btn-default btn-lg">Find Out More</a>
@@ -62,13 +66,11 @@
                 cryptographic techniques from <i>secure multi-party computation</i> and additional 
                 tools from <i>cloud cryptography</i> into a novel system.
 
-                <p>
-                  <img class="img-portfolio img-responsive" width="70%" src="img/as-techniques.png">
-                </p>
-
-                An open-source <a href="https://github.com/archistar/archistar-core">software prototype</a> is provided. It is capable of connecting
-                multiple cloud resources. This type of configuration is often called multi-cloud 
-                paradigm or cloud-of-clouds.
+                <p><img class="img-portfolio img-responsive" width="70%" src="img/as-techniques.png"></p>
+                
+                An open-source <a href="https://github.com/archistar/archistar-core">software prototype</a>
+                is provided, which is capable of connecting multiple cloud resources. 
+                This type of configuration is often called multi-cloud paradigm or cloud-of-clouds.
               </p>
           </div>
         </div>
@@ -76,12 +78,12 @@
     </div>
     <!-- /Intro -->
   
-    <!-- Features -->
-    <div id="features" class="services">
+    <!-- Goals -->
+    <div id="goals" class="services">
       <div class="container">
         <div class="row">
           <div class="col-md-4 col-md-offset-4 text-center">
-              <h2>Security Features</h2>
+              <h2>Security goals</h2>
             <hr>
           </div>
         </div>
@@ -90,20 +92,24 @@
             <div class="service-item">
               <i class="service-icon fa fa-key"></i>
               <h4>Privacy and integrity</h4>
-              <p>Privacy and integrity are guaranteed by the use of robust secret sharing
-              for distributed information. No bounded minority of storage systems
-              have enough information to recover the user's secret. For efficiency Archistar also supports
-              computational secure secret sharing schemes.</p>
+              <p>The primary goal of Archistar is to guarantee the privacy and integrity of stored
+              data by application of strong cryptography, especially secret sharing. Single storage 
+              nodes in the system shall get no information about data they are holding, except some meta 
+              information, and must not be able to modify it without being detected. Moreover, even 
+              colluding minorities of storage nodes must not be capable to recover or modify the plaintext.
+              </p>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="service-item">
               <i class="service-icon fa fa-wrench"></i>
               <h4>Robustness</h4>
-              <p>Byzantine robustness is accomplished by the use of a layer of active cloud components
-              running a modified PBFT protocol.
-              The system can survive arbitrary malicious active attacks from insiders, as long as 
-              they compromise less than a third of the system nodes.</p>
+              <p>Byzantine robustness is the strongest notion in fault tolerant computing and covers the
+              development of systems which can cope with arbitrary failures, whether they are passive
+              or active. The Archistar system shall survive arbitrary malicious attacks of a predefined 
+              minority of system nodes, hence, it shall be robust against so called active insider attacks
+              and not only work in the honest but curious adversary model.
+              </p>
             </div>
           </div>
         </div>
@@ -112,24 +118,32 @@
             <div class="service-item">
               <i class="service-icon fa fa-shield"></i>
               <h4>Availability</h4>
-              <p>A distributed secure and robust system also increases availability.
-              The system is immune against arbitrary failures in subsets of nodes and therefore can 
-              survive outages of single providers.</p>
+              <p>The basic idea of a distributed storage system shall also give rise to increased 
+              availability. If the system is immune against arbitrary failures in subsets of nodes 
+              it is automatically robust against outages of single providers. In fact, availability
+              as considered typically in the security context is a subset of Byzantine robustness and
+              already contained in the liveness guarantees of Byzantine protocols.
+              </p>
             </div>
           </div>
           <div class="col-md-4 text-center">
             <div class="service-item">
               <i class="service-icon fa fa-money"></i>
               <h4>No vendor lock-in</h4>
-              <p>A vendor and interface agnostic storage layer guarantees high flexibility
-              for remote data storage. Take back your data! Changing 
-              providers should be easy and results in monetary savings.</p>
+              <p> The rapid development and spread of cloud computing naturally leads to a lack of
+              standardization and homogenization of interfaces. Thus, choosing the right
+              provider is currently of major concern when going into the cloud. 
+              Because the architecture of Archistar comprises a provider agnostic layer 
+              it additionally removes the vendor lock-in and thus tremendously alleviates provider 
+              selection and migration. Moreover, the core software and protocols will be 
+              open source and shall serve as vendor independent interface.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- /Features -->
+    <!-- /Goals -->
 
     <!-- Callout -->
     <div class="callout">
@@ -139,7 +153,130 @@
     </div>
     <!-- /Callout -->
 
-    <!-- Archistecture -->
+    <!-- Use cases -->
+    <div id="usecases" class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Use Cases</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <p>
+              Many different scenarios can be covered by an Archistar like configuration. The
+              main idea is to provide a secure and robust storage solution for the outsourcing
+              scenario. If private data is put on external storage entities which are outside
+              of the own security perimeter extreme care must be taken to keep the required 
+              security properties. Although, a special contractual basis can help to force 
+              a provider to some best practices in operation, the client is ultimately responsible
+              for his data and delegation is not an option in many cases.
+            </p>
+            <p>
+              In an Archistar setup security is guaranteed by cryptographic means and the
+              client can convincingly prove his effort in data protection. Moreover, also the
+              provider has perfect arguments to denial knowledge of the data he is storing
+              and can propose relaxed service level agreements with cheaper pay plans.
+              One can think of an Archistar configuration like a secure cloud-RAID 
+              configuration with more additional features. The system shall support multiple
+              users and additionally multimodal encryption, hence, different data is distributed
+              with different algorithms dependent on the required properties.
+            </p>
+            <p>
+              Because secure data storage should be of paramount interest even for 
+              end users, we selected the use case <i>personal digital safe</i> for demonstration
+              of the project prototype. However, the software core will be independent of 
+              this special scenario and could be used in many other situation. The overall
+              configuration is shown in the following figure.
+            </p>
+            <p><img class="img-portfolio img-responsive"  src="img/cloud-of-clouds3.png"></p>
+            <h4><i>Figure: Use case digital safe</i></h4>
+            <p>&nbsp;</p>
+            <p>
+              Please note, this is a <b>research project</b> and the developed software is 
+              currently <b>not ready for poduction usage</b>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Use cases -->
+
+    <!-- Methods -->
+    <div id="methods" class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Methods used </h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h3><i>Byzantine robustness</i></h3>
+              Byzantine robustness guarantees survivability even against arbitrary malicious insiders,
+              as long as less than one third of all nodes are compromised. A Byzantine layer works as a
+              consensus system between all parties, whereby malice players cannot influence the consensus
+              of all hones parties. Archistar uses such a BFT layer at its core, to guarantee consistency,
+              linearity and liveness for plaintext information and meta data. The BFT layer will also be
+              responsible for user authentication and access control in the case of a multi user scenario.
+            <hr>
+            
+            <h3><i>Secure multi-party computation</i></h3>
+            <p>
+              Privacy and integrity will be guaranteed by the use of secret sharing techniques
+              when distributing information. In the Archistar prototype we integrate various 
+              secret sharing techniques into the byzantine layer to add privacy and integrity for 
+              stored data. The system will support secret sharing and robust secret sharing variants, which
+              are giving information theoretical privacy guarantees. For efficiency reasons Archistar
+              will also support computational secure secret sharing, which are not information theoretical
+              secure, but have less data overhead than perfect secret sharing. They are more like a 
+              a secure RAID 6 systems over multiple clouds. However, the use of secret sharing in contrast
+              to general symmetric encryption greatly simplifies key management and paves the way
+              for multimodal encryption.
+            </p>
+            <hr>
+
+            <h3><i>Cloud cryptography</i></h3>
+
+            <p>
+              Extending the storage backend with active components to run application logic is a major difference
+              to currently existing multi-cloud storage solutions. Active cloud elements are required to run
+              BFT logic and protocols but can be also used to further enhance system capabilities. In the case
+              of Archistar we plan to integrate two methods from the area of cloud cryptography, namely,
+              <i>searchable encryption</i> and <i>remote data checking</i>.
+            </p>
+            <p>
+              The use of searchable encryption allows Archistar clients to offload index searches without
+              sacrificing privacy. The nodes will run encrypted search queries on encrypted index files for 
+              the clients. Thus, ideally they process user queries without learning information about the 
+              data they are holding.
+            </p>
+            <p>
+              Built-in remote data checking capabilities will help to run consistency checks on the stored data
+              without downloading them to the client. Ideally regular testing is done by an external 
+              security monitor process which does not necessarily need access to the data itself and 
+              therefore could run in an untrusted environment.
+            </p>
+            <hr>
+
+            <h3><i>Unique combination</i></h3>
+
+            <p>
+              To our best knowledge, the Archistar prototype is the first open source platform 
+              which will demonstrate the feasibility and benefits of combining all these techniques.
+              Moreover, it should facilitate further research for increased use of cryptography 
+              in cloud settings to relax the trust level of providers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Methods -->
+
+    <!-- Architecture -->
     <div id="architecture" class="portfolio">
       <div class="container">
         <div class="row">
@@ -150,34 +287,36 @@
         </div>
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-            <h3><i>Use case: Digital safe</i></h3>
-            <img class="img-portfolio img-responsive"  src="img/cloud-of-clouds3.png">
+            <p>
+              A rough sketch of the architecture in the figure below shows three main layers.
+            </p>
+            <p><img class="img-portfolio img-responsive"  src="img/safe-architecture.png"></p>
+            <h4><i>Figure: System layers</i></h4>
             <hr>
-            
-            <h3><i>System layers</i></h3>
-            <img class="img-portfolio img-responsive"  src="img/safe-architecture.png">
-            <hr>
-
-            <h3><i>Software architecture</i></h3>
-            <img class="img-portfolio img-responsive"  src="img/components_rough.png">
           </div>
         </div>
       </div>
     </div>
     <!-- /Architecture -->
 
-    <!-- Go to source -->
-    <div class="call-to-action">
+    <!-- Results -->
+    <div id="results" class="call-to-action">
       <div class="container">
         <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Status and results</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-            <h3>Current results of Archistar are Open Source and available on Github.</h3>
+            <h3>Current results of Archistar are Open Source and available on GitHub.</h3>
             <a href="https://github.com/Archistar" class="btn btn-lg btn-default">Archistar Repository</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- /Go to source -->
+    <!-- /Results -->
 
     <!-- Partners -->
     <div id="partners" class="intro">
@@ -190,9 +329,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
-            <div class="portfolio-item">
-              <a href="http://www.ait.ac.at"><img class="img-portfolio img-responsive"  src="img/ait_logo.png"></a>
-            </div>
+            <a target="_blank" href="http://www.ait.ac.at"><img width="80%" src="img/ait_logo.png"></a>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
@@ -202,9 +339,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
-            <div class="portfolio-item">
-              <a href="http://www.iaik.tugraz.at"><img class="img-portfolio img-responsive"  src="img/iaik_logo.png"></a>
-            </div>
+              <a href="http://www.iaik.tugraz.at"><img width="70%" src="img/iaik_logo.png"></a>
           </div>
           <div class="col-md-4 text-center">
             <div class="portfolio-item">
@@ -215,7 +350,7 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="http://www.datentechnik-innovation.com"><img class="img-portfolio img-responsive"  src="img/dti_logo.png"></a>
+              <a href="http://www.datentechnik-innovation.com"><img width="70%" src="img/dti_logo.png"></a>
             </div>
           </div>
           <div class="col-md-4 text-center">
@@ -227,7 +362,7 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-2 text-center">
             <div class="portfolio-item">
-              <a href="http://www.ffg.at"><img class="img-portfolio img-responsive"  src="img/bmvit_logo.png"></a>
+              <a href="http://www.ffg.at"><img width="70%" src="img/bmvit_logo.png"></a>
             </div>
           </div>
           <div class="col-md-4 text-center">
@@ -238,12 +373,15 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-md-offset-4 text-center">
-            <img class="img-portfolio img-responsive"  src="img/archistar_logo.png">
+            <p>&nbsp;</p>
+            <p><img width="90%" src="img/archistar_logo.png"></p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center">
-              <h4>If you are interested in collaborating,<br/> please contact us at <a href="https://github.com/archistar">GitHub</a>!</h4>
+            <h4>If you are interested in collaborating,<br/> please contact us at 
+              <a href="https://github.com/archistar">GitHub</a>!
+            </h4> 
           </div>
         </div>
       </div>
@@ -259,7 +397,9 @@
               <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
             </div>
             <hr>
-            <p>Copyright &copy; AIT - Austrian Institute of Technology GmbH 2013</p>
+            <p>Copyright &copy; <a href="http://www.ait.ac.at">
+                AIT-Austrian Institute of Technology GmbH 2013</a>
+            </p>
           </div>
         </div>
       </div>
